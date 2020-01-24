@@ -118,5 +118,5 @@ ou: Group" > base.ldif
 
 setenforce 0
 
-ldap -x -W -D 'cn=ldapadm,dc=nti310,dc=local" -f base.ldif -y /root/ldap_admin_pass
+ldapadd -x -W -D "cn=ldapadm,dc=nti310,dc=local" -f base.ldif -y /root/ldap_admin_pass
 systemctl restart httpd
