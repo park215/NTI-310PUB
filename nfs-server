@@ -21,5 +21,3 @@ echo "/var/nfsshare/home_dirs *(rw,sync,no_all_squash)
 systemctl restart nfs-server
 #install net tools to get ifconfig
 yum -y install net-tools
-
-
