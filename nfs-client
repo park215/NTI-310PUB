@@ -1,0 +1,9 @@
+#use ifconfig to find your ip address, you will use this for the client.
+
+apt-get install nfs-client 
+
+showmount -e $ipaddress where $ipaddress is the ip of your nfs server
+mkdir /mnt/test
+echo "10.128.0.30:/var/nfshare/testing  /mnt/test   nfs   defaults 0 0" >> /etc/fstab
+mount -a
+*profit*
