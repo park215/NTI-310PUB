@@ -2,7 +2,7 @@
 #Based on the tutorial here:
 sudo yum update -y
 yum install -y openvpn wget
-wget -0 /tmp/easyrsa https://github.com/OpenVPN/easy-rsa-old/archive/2.3.3.tar.gz
+wget -O /tmp/easyrsa https://github.com/OpenVPN/easy-rsa-old/archive/2.3.3.tar.gz
 tar xfz /tmp/easyrsa
 mkdir /etc/openvpn/easy-rsa
 cp -rf easy-rsa-old-2.3.3/easy-rsa/2.0/* /etc/openvpn/easy-rsa
