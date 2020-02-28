@@ -20,7 +20,7 @@ sudo cp /usr/share/doc/openvpn-2.4.8/sample/sample-config-files/server.conf /etc
 # Lastly, OpenVPN strongly recommends that users enable TLS Authentication, a cryptographic protocol that ensures secure communication
 # comment out tls-auth ta.key 0 by putting a semicolon in front
 # add tls-crypt myvpn.tlsauth
-openvpn --genkey --secret /etc/openvpn/myvpn/tlsauth
+openvpn --genkey --secret /etc/openvpn/myvpn.tlsauth
 mkdir /etc/openvpn/easy-rsa/keys
 # vim /etc/openvpn/easy-rsa/vars
 yum install bind-utils
