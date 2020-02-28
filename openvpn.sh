@@ -63,6 +63,7 @@ firewall-cmd --query-masquerade
 SHARK=$(ip route get 8.8.8.8 | awk 'NR==1 {print $(NF-2)}')
 firewall-cmd --permanent --direct --passthrough ipv4 -t nat -A POSTROUTING -s 10.8.0.0/24 -o $SHARK -j MASQUERADE 
 firewall-cmd --reload
+systemctl start firewalld
 # vim /etc/sysctl.conf
 # put in net.ipv4.ip_forward = 1
 # this can be echo'ed in in automation
