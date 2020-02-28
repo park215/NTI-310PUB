@@ -1,6 +1,8 @@
 #!/bin/bash
 #Based on the tutorial here:
 sudo yum update -y
+yum install yum-utils
+yum-complete-transaction
 yum install -y openvpn wget
 wget -O /tmp/easyrsa https://github.com/OpenVPN/easy-rsa-old/archive/2.3.3.tar.gz
 tar xfz /tmp/easyrsa
